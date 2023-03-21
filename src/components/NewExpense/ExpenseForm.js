@@ -1,4 +1,4 @@
-import "./NewExpense.css";
+import "./ExpenseForm.css";
 import React from "react";
 
 const ExpenseForm = () => {
@@ -17,10 +17,10 @@ const ExpenseForm = () => {
           <label>Date</label>
           <input type="date" min="2023-01-01" max="2030-01-01" />
         </div>
-          </div>
-          <div className="new-expense__actions">
-              <button type="submit">Add Expense</button>
-          </div>
+      </div>
+      <div className="new-expense__actions">
+        <button type="submit">Add Expense</button>
+      </div>
     </form>
   );
 };
