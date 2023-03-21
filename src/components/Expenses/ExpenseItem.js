@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 import "../Expenses/ExpenseItem.css"
 import Card from "../UI/Card";
 import ExpenseDate from "./ExpenseDate";
@@ -5,18 +7,20 @@ import ExpenseDate from "./ExpenseDate";
 
 const ExpenseItem = (props) => {
 
+  const [title, setTitle] = useState(props.title);
   const clickHandler = () => {
-    console.log("clickHandler");
+    setTitle('Updated!');
   }
+
 
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
       <div className="expense-item__description">
-        <h2>{props.title}</h2>
+        <h2>{title}</h2>
         <div className="expense-item__price">${props.amount}</div>
       </div>
-      <button onMouseOver={clickHandler} onClick={clickHandler}>Change Title</button>
+      <button onClick={clickHandler}>Change Title</button>
     </Card>
   );
 }
