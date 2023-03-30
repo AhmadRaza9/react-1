@@ -69,6 +69,7 @@ const ExpenseForm = (props) => {
         <button type="submit">Add Expense</button>
       </div>
     </form>
+
   );
 };
 
